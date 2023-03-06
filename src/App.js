@@ -2,7 +2,7 @@ import { useState } from "react";
 import AnimalShow from "./AnimalShow";
 
 function getRandomAnimals() {
-  const animals=['bird', 'cat', 'cow', 'dog', 'alligator', 'horse'];
+  const animals=['bird', 'cat', 'cow', 'dog', 'gator', 'horse'];
   return animals[Math.floor(Math.random() * animals.length)];
 }
 
@@ -10,7 +10,7 @@ function App () {
   const[animals, setAnimals] = useState([]);
 
   const handleClick = () => {
-    //never update state directly
+    //never update state directly use setters
     setAnimals([...animals, getRandomAnimals()]);
   };
 
